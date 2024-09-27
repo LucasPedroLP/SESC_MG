@@ -3,38 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dropdown and Checkbox Example</title>
+    <title>Cadastro</title>
+    <script>
+        function addItem() {
+            const dropdown1 = document.getElementById('dropdown1');
+            const dropdown2 = document.getElementById('dropdown2');
+            const textarea1 = document.getElementById('textarea1').value;
+            const textarea2 = document.getElementById('textarea2').value;
+
+            if (textarea1) {
+                const option1 = document.createElement('option');
+                option1.text = textarea1;
+                dropdown1.add(option1);
+            }
+
+            if (textarea2) {
+                const option2 = document.createElement('option');
+                option2.text = textarea2;
+                dropdown2.add(option2);
+            }
+
+            // Clear text areas after adding items
+            document.getElementById('textarea1').value = '';
+            document.getElementById('textarea2').value = '';
+        }
+    </script>
 </head>
 <body>
     <h1>Dropdown and Checkbox Example</h1>
-    <form>
-        <!-- First line with dropdowns and checkbox -->
-        <label for="dropdown1">List 1:</label>
-        <select id="dropdown1">
-            <option value="item1">Item 1</option>
-            <option value="item2">Item 2</option>
-        </select>
+    <!-- First line with dropdowns and checkbox -->
+    <label for="dropdown1">List 1:</label>
+    <select id="dropdown1">
+        <option value="item1">Item 1</option>
+        <option value="item2">Item 2</option>
+    </select>
 
-        <label for="dropdown2">List 2:</label>
-        <select id="dropdown2">
-            <option value="itemA">Item A</option>
-            <option value="itemB">Item B</option>
-        </select>
+    <label for="dropdown2">List 2:</label>
+    <select id="dropdown2">
+        <option value="itemA">Item A</option>
+        <option value="itemB">Item B</option>
+    </select>
 
-        <label for="active">Active:</label>
-        <input type="checkbox" id="active" name="active">
-        <br><br>
+    <label for="active">Active:</label>
+    <input type="checkbox" id="active" name="active">
+    <br><br>
 
-        <!-- Second line with text areas and Botão -->
-        <label for="textarea1">Text Area 1:</label>
-        <textarea id="textarea1" rows="4" cols="50"></textarea>
-        <br><br>
+    <!-- Second line with text areas and Botão -->
+    <label for="textarea1">Text Area 1:</label>
+    <textarea id="textarea1" rows="4" cols="50"></textarea>
+    <br><br>
 
-        <label for="textarea2">Text Area 2:</label>
-        <textarea id="textarea2" rows="4" cols="50"></textarea>
-        <br><br>
+    <label for="textarea2">Text Area 2:</label>
+    <textarea id="textarea2" rows="4" cols="50"></textarea>
+    <br><br>
 
-        <Botão type="Botão">Add Items</Botão>
-    </form>
+    <Botão type="Botão" onclick="addItem()">Add Items</Botão>
 </body>
 </html>
