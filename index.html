@@ -1,38 +1,40 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- <script type="text/javascript" charset="utf-8">
-    (function (g, e, n, es, ys) {
-      g['_genesysJs'] = e;
-      g[e] = g[e] || function () {
-                    (g[e].q = g[e].q || []).push(arguments)
-      };
-      g[e].t = 1 * new Date();
-      g[e].c = es;
-      ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
-    })(window, 'Genesys', 'https://apps.mypurecloud.com/genesys-bootstrap/genesys.min.js', {
-      environment: 'prod',
-      deploymentId: '0848b0b1-4a71-436e-8e1a-15b5eff6f7fa'
-    });
-</script> -->
-
-<script type="text/javascript" charset="utf-8">
-  (function (g, e, n, es, ys) {
-    g['_genesysJs'] = e;
-    g[e] = g[e] || function () {
-      (g[e].q = g[e].q || []).push(arguments)
-    };
-    g[e].t = 1 * new Date();
-    g[e].c = es;
-    ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
-  })(window, 'Genesys', 'https://apps.sae1.pure.cloud/genesys-bootstrap/genesys.min.js', {
-    environment: 'prod-sae1',
-    deploymentId: 'e5a03c1c-4f4c-4de8-8803-ff145bc5cb3e'
-  });
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown and Checkbox Example</title>
 </head>
 <body>
-  <div>    
-      <!-- <input type="button" onclick="load()" value="load"/> -->
-      <div id="genesys-support-center"></div>    
-    </div>
-  </body>
+    <h1>Dropdown and Checkbox Example</h1>
+    <form>
+        <!-- First line with dropdowns and checkbox -->
+        <label for="dropdown1">List 1:</label>
+        <select id="dropdown1">
+            <option value="item1">Item 1</option>
+            <option value="item2">Item 2</option>
+        </select>
+
+        <label for="dropdown2">List 2:</label>
+        <select id="dropdown2">
+            <option value="itemA">Item A</option>
+            <option value="itemB">Item B</option>
+        </select>
+
+        <label for="active">Active:</label>
+        <input type="checkbox" id="active" name="active">
+        <br><br>
+
+        <!-- Second line with text areas and Botão -->
+        <label for="textarea1">Text Area 1:</label>
+        <textarea id="textarea1" rows="4" cols="50"></textarea>
+        <br><br>
+
+        <label for="textarea2">Text Area 2:</label>
+        <textarea id="textarea2" rows="4" cols="50"></textarea>
+        <br><br>
+
+        <Botão type="Botão">Add Items</Botão>
+    </form>
+</body>
+</html>
